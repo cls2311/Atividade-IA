@@ -8,14 +8,11 @@ from datetime import datetime
 # ----------------------------------------------------------------------
 df = pd.read_csv('dados_covid_prova.csv', encoding='utf-8')
 print("Formato inicial:", df.shape)
-print("\nNomes das colunas:", df.columns.tolist())
-print("\nPrimeiras 5 linhas:\n", df.head())
 
 # ----------------------------------------------------------------------
 # 2. Padronizar nomes das colunas (remover acentos e caracteres especiais)
 # ----------------------------------------------------------------------
 def remove_accents(text):
-    # Mapeamento de caracteres acentuados para seus equivalentes sem acento
     mapping = {
         'á': 'a', 'à': 'a', 'ã': 'a', 'â': 'a',
         'é': 'e', 'ê': 'e',
@@ -23,33 +20,28 @@ def remove_accents(text):
         'ó': 'o', 'ô': 'o', 'õ': 'o',
         'ú': 'u', 'û': 'u',
         'ç': 'c',
-        ' ': '_'  # substitui espaços por underscore
+        ' ': '_'
     }
     for k, v in mapping.items():
         text = text.replace(k, v)
-    # Remove qualquer outro caractere que não seja letra, número ou underscore
     text = re.sub(r'[^a-zA-Z0-9_]', '', text)
     return text
 
-# Aplica a padronização a todos os nomes de coluna
-new_columns = [remove_accents(col.lower()) for col in df.columns]
-df.columns = new_columns
-
-# Garante que a coluna de doenças tenha um nome simples e único
+df.columns = [remove_accents(col.lower()) for col in df.columns]
 if 'doencas_respiratoria' in df.columns:
     df.rename(columns={'doencas_respiratoria': 'doenca_respiratoria'}, inplace=True)
 
-print("\nNomes das colunas padronizados:", df.columns.tolist())
+print("\nColunas padronizadas:", df.columns.tolist())
 
 # ----------------------------------------------------------------------
-# 3. Limpar e padronizar 'covid_positivo'
+# 3. Limpar e padronizar 'covid_positivo' (variável alvo - NÃO imputar)
 # ----------------------------------------------------------------------
 df['covid_positivo'] = df['covid_positivo'].replace({'Ss': 'Sim', 'N': 'Não'}).fillna('Não')
 valid_covid = ['Sim', 'Não']
 df = df[df['covid_positivo'].isin(valid_covid)]
 
 # ----------------------------------------------------------------------
-# 4. Limpar 'genero'
+# 4. Limpar 'genero' (categórica) e imputar pela moda
 # ----------------------------------------------------------------------
 gender_map = {
     'Masculino': 'Masculino',
@@ -60,25 +52,31 @@ gender_map = {
     'Mulher': 'Feminino',
     'SN': np.nan
 }
-df['genero'] = df['genero'].map(gender_map).fillna(np.nan)
+df['genero'] = df['genero'].map(gender_map)
+# Calcular moda após padronização
+moda_genero = df['genero'].mode()[0] if not df['genero'].mode().empty else 'Masculino'
+df['genero'] = df['genero'].fillna(moda_genero)
 
 # ----------------------------------------------------------------------
-# 5. Limpar 'idade'
+# 5. Limpar 'idade' (numérica) e imputar pela mediana (robusta a outliers)
 # ----------------------------------------------------------------------
 df['idade'] = pd.to_numeric(df['idade'], errors='coerce')
 df.loc[df['idade'] > 120, 'idade'] = np.nan
 df.loc[df['idade'] < 0, 'idade'] = np.nan
-median_age = df['idade'].median()
-df['idade'] = df['idade'].fillna(median_age)
+mediana_idade = df['idade'].median()
+df['idade'] = df['idade'].fillna(mediana_idade)
 
 # ----------------------------------------------------------------------
-# 6. Limpar 'febre'
+# 6. Limpar 'febre' (numérica) e imputar pela mediana (apenas valores válidos)
 # ----------------------------------------------------------------------
 df['febre'] = pd.to_numeric(df['febre'], errors='coerce')
 df.loc[(df['febre'] < 36) | (df['febre'] > 40), 'febre'] = np.nan
+# Calcular mediana apenas com valores válidos (dentro do intervalo)
+mediana_febre = df['febre'].median()
+df['febre'] = df['febre'].fillna(mediana_febre)
 
 # ----------------------------------------------------------------------
-# 7. Limpar 'Cidade'
+# 7. Limpar 'cidade' (categórica) e imputar pela moda
 # ----------------------------------------------------------------------
 city_map = {
     'João Pessoa': 'João Pessoa',
@@ -91,11 +89,12 @@ city_map = {
     'Sousa': 'Sousa',
     'Souza': 'Sousa'
 }
-# Aplica o mapeamento (mantém o nome original com acentos para as cidades)
 df['cidade'] = df['cidade'].map(city_map).fillna(df['cidade'])
+moda_cidade = df['cidade'].mode()[0] if not df['cidade'].mode().empty else 'João Pessoa'
+df['cidade'] = df['cidade'].fillna(moda_cidade)
 
 # ----------------------------------------------------------------------
-# 8. Limpar 'doenca_respiratoria'
+# 8. Limpar 'doenca_respiratoria' e filtrar apenas doenças respiratórias
 # ----------------------------------------------------------------------
 disease_map = {
     'Asma': 'Asma',
@@ -107,12 +106,12 @@ disease_map = {
 }
 df['doenca_respiratoria'] = df['doenca_respiratoria'].map(disease_map).fillna(df['doenca_respiratoria'])
 
-# Filtra apenas doenças respiratórias
+# Filtra apenas as respiratórias (descartando outras, sem imputação)
 respiratory_diseases = ['Asma', 'Bronquite', 'Pneumonia']
 df = df[df['doenca_respiratoria'].isin(respiratory_diseases)]
 
 # ----------------------------------------------------------------------
-# 9. Limpar 'data_do_diagnostico' (nome corrigido)
+# 9. Limpar 'data_do_diagnostico'
 # ----------------------------------------------------------------------
 def parse_date(date_str):
     if pd.isna(date_str):
@@ -139,10 +138,9 @@ def parse_date(date_str):
                 return np.nan
     return np.nan
 
-# Agora a coluna se chama 'data_do_diagnostico' (sem acento)
 df['data_do_diagnostico'] = df['data_do_diagnostico'].apply(parse_date)
 df['data_do_diagnostico'] = pd.to_datetime(df['data_do_diagnostico'], errors='coerce')
-df = df.dropna(subset=['data_do_diagnostico'])
+df = df.dropna(subset=['data_do_diagnostico'])   # data é essencial, então removemos se faltar
 df['data_do_diagnostico'] = df['data_do_diagnostico'].dt.strftime('%d/%m/%Y')
 
 # ----------------------------------------------------------------------
@@ -158,6 +156,5 @@ df.reset_index(drop=True, inplace=True)
 print("\nFormato após limpeza:", df.shape)
 print("\nValores ausentes por coluna:\n", df.isnull().sum())
 
-# Salva com os nomes originais? Vamos manter os nomes padronizados para consistência
 df.to_csv('dados_covid_limpo.csv', index=False, encoding='utf-8-sig')
 print("\nDados limpos salvos em 'dados_covid_limpo.csv'")
