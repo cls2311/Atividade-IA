@@ -1,0 +1,34 @@
+﻿id,idade,genero,febre,cidade,covid_positivo,doenca_respiratoria,data_do_diagnostico
+1,60.0,Masculino,40.0,João Pessoa,Sim,Asma,07/08/2021
+2,27.0,Masculino,,Campina Grande,Não,Bronquite,22/06/2021
+6,84.0,Feminino,37.7,Cabedelo,Não,Asma,07/08/2021
+7,50.0,Masculino,37.9,João Pessoa,Sim,Bronquite,22/06/2021
+8,20.0,Feminino,38.9,Campina Grande,Não,Pneumonia,22/06/2021
+10,64.0,Masculino,40.0,Sousa,Sim,Asma,29/05/2022
+26,50.0,,,Sousa,Não,Asma,07/08/2021
+28,33.0,Masculino,,Campina Grande,Sim,Pneumonia,15/02/2021
+30,34.0,Feminino,37.7,Sousa,Não,Bronquite,15/02/2021
+35,74.0,Feminino,,Patos,Sim,Asma,29/05/2021
+36,82.0,Masculino,,Sousa,Não,Bronquite,29/05/2021
+37,38.0,Masculino,40.0,Cajazeiras,Sim,Pneumonia,15/02/2021
+38,55.0,Feminino,,Cabedelo,Sim,Asma,29/05/2021
+39,49.0,Feminino,37.5,Patos,Sim,Bronquite,22/08/2023
+40,50.0,Masculino,,Sousa,Não,Pneumonia,15/02/2021
+43,27.0,Feminino,37.9,João Pessoa,Sim,Asma,15/02/2021
+45,20.0,Feminino,38.9,Cajazeiras,Não,Pneumonia,15/02/2021
+46,72.0,Feminino,40.0,Cabedelo,Sim,Asma,15/02/2021
+47,19.0,Masculino,,Patos,Não,Asma,15/02/2021
+52,110.0,Feminino,37.5,Campina Grande,Sim,Pneumonia,15/02/2021
+53,47.0,Feminino,,Sousa,Não,Asma,15/02/2021
+54,83.0,Feminino,,Cajazeiras,Sim,Asma,08/08/2022
+55,60.0,Masculino,37.7,Cabedelo,Sim,Asma,08/08/2021
+57,71.0,Feminino,38.9,Sousa,Não,Bronquite,15/09/2022
+58,49.0,Masculino,38.9,Cajazeiras,Sim,Pneumonia,15/02/2021
+60,6.0,Feminino,,João Pessoa,Não,Asma,25/07/2022
+61,24.0,Feminino,40.0,Campina Grande,Sim,Asma,04/05/2021
+63,56.0,Masculino,37.5,Sousa,Sim,Bronquite,25/07/2022
+64,10.0,Masculino,,Cajazeiras,Não,Pneumonia,04/05/2021
+65,42.0,Feminino,,Cabedelo,Sim,Asma,15/02/2021
+66,69.0,Feminino,37.7,Patos,Não,Asma,15/02/2021
+69,54.0,Masculino,38.9,Cabedelo,Sim,Bronquite,04/05/2021
+73,83.0,,40.0,Cajazeiras,Sim,Asma,18/09/2022
