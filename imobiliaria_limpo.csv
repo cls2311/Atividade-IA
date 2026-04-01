@@ -1,0 +1,16 @@
+﻿codigo_imovel,localizacao,tipo_de_imovel,data_locacao,comodos,tamanho_m2,valor_da_locacao,vaga_na_garagem
+2547,João Pessoa,Casa,12/02/2023,5.0,80.0,1500.0,Sim
+3564,Campina Grande,Apartamento,17/04/2021,5.0,90.0,1150.0,Sim
+215,Cajazeiras,Kitnet,03/04/2011,5.0,100.0,800.0,Sim
+564,Patos,Duplex,25/09/2022,7.0,120.0,1500.0,Não
+7895,Patos,Kitnet,12/02/2023,4.0,90.0,800.0,Sim
+3648,Campina Grande,Duplex,17/04/2021,5.0,90.0,1500.0,Sim
+7852,Pombal,Casa,03/04/2011,4.0,45.0,1500.0,Sim
+158,Riacho dos Cavalos,Apartamento,25/09/2022,6.0,80.0,800.0,Sim
+89035,Cabedelo,Duplex,12/02/2023,5.0,120.0,800.0,Não
+9034,Campina Grande,Duplex,17/04/2021,5.0,120.0,1500.0,Não
+6456,João Pessoa,Galpão,03/04/2011,5.0,120.0,800.0,Não
+2415,João Pessoa,Quarto,25/09/2022,5.0,120.0,1500.0,Sim
+8914,João Pessoa,Casa,17/04/2021,0.0,90.0,800.0,Não
+2465,João Pessoa,Apartamento,03/04/2011,7.0,90.0,800.0,Sim
+3549,Patos,Kitnet,25/09/2022,4.0,90.0,1500.0,Não
