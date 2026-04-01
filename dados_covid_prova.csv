@@ -1,0 +1,87 @@
+ID,idade,genero,febre,Cidade,covid_positivo,Doenças respiratória,Data do diagnóstico
+1,60,Masculino,40,João Pessoa,Sim,Asma,07/08/21
+2,27,Masculino,42,Campina Grande,Não,Bronquite,22/06/21
+3,42,Masculino,37.5,Patos,Ss,Pnumonia,02 de maio de 2021
+4,31,Feminino,52.4,Sousa,Não,Cardíaco,22/06/21
+5,65,Feminino,35.8,Cajazeiras,Sim,Hipertenso,22/06/21
+6,84,Feminino,37.7,Cabedelo,Não,Asma,07/08/21
+7,,Masculino,37.9,João Pessoa,Ss,Bronquite,22/06/21
+8,20,Feminino,38.9,Campina Grande,Não,Pnumonia,22/06/21
+9,19,Menina,38.9,Patos,Sim,Asma,02 de maio de 2021
+10,64,Menino,40,Sousa,Sim,Asma,29/05/22
+11,75,Homem,65,Cajazeiras,Sim,Cardíaco,29/05/22
+12,65,Mulher,,Cabedelo,Não,Hipertenso,07/08/21
+13,25,Feminino,40,Patos,Sim,Asma,18 de novembro de 2021
+14,,Masculino,42,Sousa,Não,Bronquite,02 de maio de 2021
+15,51,Masculino,37.5,Cajazeiras,Sim,Pnumonia,18 de novembro de 2021
+16,70,Masculino,52.4,Cabedelo,Sim,Cardíaco,18 de novembro de 2021
+17,69,Feminino,35.8,João Pessoa,Sim,Hipertenso,07/08/21
+18,150,Feminino,37.7,Campina Grande,Não,Asma,18 de novembro de 2021
+19,64,Feminino,37.9,Patos,Sim,Bronquite,18 de novembro de 2021
+20,320,Feminino,38.9,Sousa,Não,Pnumonia,18 de novembro de 2021
+21,12,Menino,38.9,Cajazeiras,Sim,Cardíaco,07/08/21
+22,73,Homem,40,Cabedelo,Sim,Hipertenso,18 de novembro de 2021
+23,71,,65,João Pessoa,Sim,Asma,02 de maio de 2021
+24,80,,,Campina Grande,Não,Bronquite,02 de maio de 2021
+25,13,,40,Patos,Sim,Pnumonia,02 de maio de 2021
+26,233,,42,Sousa,Não,Asma,07/08/21
+27,19,Masculino,37.5,João Pessoa,Sim,Bronquite,02 de maio de 2021
+28,33,Masculino,52.4,Campina Grande,Sim,Pnumonia,15/02/21
+29,16,Masculino,35.8,Patos,Sim,Asma,02 de maio de 2021
+30,34,Feminino,37.7,Sousa,Não,Bronquite,15/02/21
+31,,Feminino,37.9,Cajazeiras,Sim,Pnumonia,02 de maio de 2021
+32,83,Feminino,38.9,Cabedelo,Não,Asma,02 de maio de 2021
+33,34,Masculino,38.9,João Pessoa,Sim,Bronquite,02 de maio de 2021
+34,26,Feminino,40,Campina Grande,Sim,Pnumonia,02 de maio de 2021
+35,74,Menina,65,Patos,Sim,Asma,29/05/21
+36,82,Menino,,Sousa,Não,Bronquite,29/05/21
+37,38,Homem,40,Cajazeiras,Sim,Pnumonia,15/02/21
+38,55,Mulher,42,Cabedelo,Ss,Asma,29/05/21
+39,49,Feminino,37.5,Patos,Ss,Bronquite,22/08/23
+40,,Masculino,52.4,Sousa,N,Pnumonia,15/02/21
+41,49,Masculino,35.8,Cajazeiras,Não,Asma,03 de dezembro de 2020
+42,82,Masculino,37.7,Cabedelo,Sim,Asma,03 de dezembro de 2020
+43,27,Feminino,37.9,João Pessoa,Sim,Asma,15/02/21
+44,22,Feminino,38.9,Sousa,Sim,Bronquite,03 de dezembro de 2020
+45,20,Feminino,38.9,Cajazeiras,Não,Pnumonia,15/02/21
+46,72,Feminino,40,Cabedelo,Sim,Asma,15/02/21
+47,19,Menino,65,Patos,Não,Asma,15/02/21
+48,18,Homem,,Sousa,Sim,Asma,03 de dezembro de 2020
+49,66,Masculino,,Cajazeiras,Sim,Diabético,15/02/21
+50,44,Masculino,40,Cabedelo,Sim,Diabético,03 de dezembro de 2020
+51,19,Masculino,42,João Pessoa,Não,Bronquite,03 de dezembro de 2020
+52,110,Feminino,37.5,CG,Sim,Pnumonia,15/02/21
+53,47,Feminino,52.4,Sousa,Não,Asma,15/02/21
+54,83,Feminino,35.8,Cajazeiras,Sim,Asma,08/08/22
+55,60,Masculino,37.7,Cabedelo,Sim,Asma,08/08/21
+56,81,Feminino,37.9,Patos,Sim,Diabético,03 de dezembro de 2020
+57,71,Menina,38.9,Sousa,Não,Bronquite,15/09/22
+58,49,Menino,38.9,Cajazeiras,Sim,Pnumonia,15/02/21
+59,23,Homem,40,Cabedelo,Sim,Asma,03 de dezembro de 2020
+60,6,Mulher,65,João Pessoa,Não,Asma,25/07/22
+61,24,Feminino,40,Campina Grande,Sim,Asma,04/05/21
+62,81,Masculino,42,CG,Sim,Diabético,03 de dezembro de 2020
+63,56,Masculino,37.5,Sousa,Sim,Bronquite,25/07/22
+64,10,Masculino,52.4,Cajazeiras,Não,Pnumonia,04/05/21
+65,42,Feminino,35.8,Cabedelo,Sim,Asma,15/02/21
+66,69,Feminino,37.7,Patos,Não,Asma,15/02/21
+67,51,Feminino,37.9,Souza,Sim,Asma,03 de dezembro de 2020
+68,65,Feminino,38.9,Cajazeiras,Sim,Diabético,25/07/22
+65,42,Feminino,35.8,Cabedelo,Sim,Asma,04/05/21
+66,69,Feminino,37.7,Patos,Não,Asma,25/12/22
+67,51,Feminino,37.9,Souza,Sim,Asma,03 de dezembro de 2020
+68,65,Feminino,38.9,Cajazeiras,Sim,Diabético,25/07/22
+69,54,Menino,38.9,Cabedelo,Sim,Bronquite,04/05/21
+70,73,Homem,40,JP,Não,Pnumonia,25/012/2022
+71,68,SN,65,CG,Sim,Asma,03 de abril de 2021
+72,75,SN,,Sousa,Não,Asma,17 de outubro de 2022
+73,83,SN,40,Cajazeiras,Sim,Asma,18/09/22
+74,34,SN,42,Cabedelo,Sim,Diabético,03 de abril de 2021
+75,34,SN,37.5,Patos,Sim,Bronquite,17 de outubro de 2022
+76,5,SN,52.4,Souza,Não,Pnumonia,17 de outubro de 2022
+77,80,SN,35.8,Cajazeiras,Sim,Asma,03 de abril de 2021
+78,8,SN,37.7,Cabedelo,N,Asma,17 de outubro de 2022
+79,11,SN,37.9,JP,Sim,Asma,17 de outubro de 2022
+7,,Masculino,37.9,João Pessoa,Ss,Bronquite,17 de outubro de 2022
+74,34,SN,42,Cabedelo,Sim,Diabético,03 de abril de 2021
+75,34,SN,37.5,Patos,Sim,Bronquite,17 de outubro de 2022

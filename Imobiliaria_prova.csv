@@ -1,0 +1,36 @@
+Código_imovel,Localização,Tipo de Imóvel,Data da ultima locação,Cômodos,Tamanho m²,Valor da locação,Vaga na garagem
+2547,João Pessoa,Casa,12/02/23,5,80,"R$1.500,00",Sim
+3564,Campina Grande,Apartamento,17/04/21,8,90,"R$2.000,00",Sim
+215,Cajazeiras,Kitnet,03/04/11,9,100,"R$800,00",Sim
+564,Patos,Duplex,25/09/22,7,120,"R$1.500,00",Não
+2355,Cabedelo,Galpão,03 de outubro de 2023,6,100,"R$700,00",Não
+248,JP,Veículo usado,17 de maio de 2010,4,100,"R$3.200,00",Sim
+7895,JP,Carro,04 de setembro de 2022,8,150,"R$3.200,00",Não
+7856,JP,Casa,17 de agosto de 2024,21,180,"R$1.500,00",Não
+3268,PT,Apartamento,05 de maio de 2002,6,0,"R$800,00",Sim
+7895,PT,Kitnet,12/02/23,4,0,"R$800,00",Sim
+3648,CG,Duplex,17/04/21,5,0,"R$1.500,00",Sim
+7852,Pombal,Casa,03/04/11,4,45,"R$1.500,00",S
+158,Riacho dos cavalos,Apartamento,25/09/22,6,80,"R$800,00",S
+78765,Sousa,Kitnet,03 de outubro de 2023,4,80,"R$800,00",S
+7625,João Pessoa,Duplex,17 de maio de 2010,12,80,"R$1.500,00",S
+365,João Pessoa,Casa,04 de setembro de 2022,18,80,"R$2.500,00",N
+5895,João Pessoa,Apartamento,17 de agosto de 2024,,95,"R$1.500,00",N
+3595,João Pessoa,Kitnet,05 de maio de 2002,,120,"R$800,00",N
+89035,Cabedelo,Duplex,12/02/23,,120,"R$800,00",N
+9034,Campina Grande,Duplex,17/04/21,5,120,"R$1.500,00",Não
+6456,João Pessoa,Galpão,03/04/11,45,120,"R$800,00",Não
+2415,João Pessoa,Quarto,25/09/22,8,120,"R$1.500,00",Sim
+4516,Cabedelo,Carro,03 de outubro de 2023,17,120,"R$800,00",Não
+2456,Campina Grande,Casa,17 de maio de 2010,6,150,"R$800,00",Não
+6475,Patos,Apartamento,04 de setembro de 2022,,100,"R$1.500,00",Sim
+7515,Cabedelo,Kitnet,17 de agosto de 2024,3,100,"R$2.500,00",Sim
+3562,JP,Duplex,05 de maio de 2002,0,180,"R$1.500,00",Não
+8914,JP,Casa,17/04/21,0,,"R$800,00",Não
+2465,JP,Apartamento,03/04/11,7,,"R$800,00",Sim
+3549,PT,Kitnet,25/09/22,4,0,"R$1.500,00",Não
+3564,Campina Grande,Casa,17/04/21,8,90,"R$2.000,00",Não
+7852,Pombal,Apartamento,03/04/11,4,45,"R$1.500,00",Sim
+158,Riacho dos cavalos,Kitnet,25/09/22,6,80,"R$800,00",Sim
+7852,Pombal,Duplex,03/04/11,4,45,"R$1.500,00",
+158,Riacho dos cavalos,Casa,25/09/22,6,80,"R$800,00",
